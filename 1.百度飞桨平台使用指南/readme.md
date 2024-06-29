@@ -27,3 +27,9 @@ Segmentation fault (core dumped)
 ```bash
 export LD_LIBRARY_PATH=/home/你的用户名（通常是aistudio）/anaconda3/envs/你的conda虚拟环境名/lib:$PATH
 ```
+## 配置pytorch
+使用conda或pip的默认源配置pytorch和torchvision等库时很可能下载速度极慢，遇到这种情况可以指定清华源进行下载，代码如下：
+```bash
+pip3 install torch torchvision torchaudio --index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+## 注意！每次重启环境后，都需要重新配置各种东西，包括创建conda虚拟环境，下载各种包等，所以请慎重重启环境！
